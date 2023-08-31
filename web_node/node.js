@@ -13,8 +13,8 @@ request(url, (error, response, body) => {
 		console.log("An error happened");
 	}
 	console.log(response.statusCode);
-	for (const k in body) {
-		console.log(k.Json());
-	};
+	const myArray = JSON.parse(body);
+	myArray.forEach((obj) => {
+		console.log(obj);});
 });
 
