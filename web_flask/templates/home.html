@@ -1,0 +1,12 @@
+{% extends "index.html" %}
+{% block home %}
+    <div class="cont">
+       <ul class="list"></ul>
+       <button type="button" class="btn btn-primary">Primary</button>
+    </div>
+    <script src="static/scripts/0-file.js"></script>
+    <script src="static/scripts/test.js"></script>  
+{% endblock home %}
+{% block body %}
+    {{ super() }}
+{% endblock body %}

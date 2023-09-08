@@ -12,8 +12,13 @@ class BaseModel:
         self.id = str(uuid.uuid4())
         if kwargs is not None and kwargs != {}:
             for k, v in kwargs.items():
-               print(k + '---->' + v) 
-               setattr(self, k, v)
+               if k == '__class__' or k == 'duration' or k == 'site':
+                   continue
+               else:
+                   setattr(self, k, v)
+        else:
+            self.id = str(uuid.uuid4())
+            self.name = args[0]
         models.storage.new(self)
 
     def __str__(self):
