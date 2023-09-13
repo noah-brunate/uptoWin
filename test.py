@@ -28,7 +28,7 @@ if os.path.exists("file.json"):
 
 #obj3 = Upcoming(**dict2)
 
-models.storage.save()
+#models.storage.save()
 
 
 print(models.storage.count())

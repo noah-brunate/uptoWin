@@ -1,0 +1,20 @@
+{% extends "index.html" %}
+{% block body %}
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+    {% for obj in objs %}
+      <div class="col-sm-5 col-md-4 col-lg-3 col-xxl-2">
+      <div class="card h-100" style="width: 18rem;">
+        <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{ obj.name }}</h5>
+          <p class="card-text">
+            <h6>Start time: {{ obj.start_time }}</h6>
+            <h6>End time: {{ obj.end_time }}</h6>
+          </p>
+          <a href="{{ obj.url }}" class="btn btn-primary" target="_self">Join contest</a>
+        </div>
+      </div>
+      </div>
+    {% endfor %}
+  </div>
+{% endblock %}

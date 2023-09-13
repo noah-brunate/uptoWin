@@ -25,16 +25,16 @@ def data():
                         num = 1
             if num == 0:
                 if obj['status'] == 'CODING':
-                    val = Running(**obj)
+                    val1 = Running(**obj)
                 elif obj['status'] == 'BEFORE':
-                    val = Upcoming(**obj)
+                    val2 = Upcoming(**obj)
 
     else:
         for obj in objs:
             if obj['status'] == 'CODING':
-                val = Running(**obj)
+                val1 = Running(**obj)
             elif obj['status'] == 'BEFORE':
-                val = Upcoming(**obj)
+                val2 = Upcoming(**obj)
 
     models.storage.save()
     print(models.storage.count())
