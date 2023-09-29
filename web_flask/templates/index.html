@@ -10,139 +10,191 @@
     <style>
       section{
         padding: 70px;}
+      .background-image {
+        background-image: url('https://www.ibm.com/blog/wp-content/uploads/2023/03/What-is-Generative-AI-what-are-Foundation-Models-and-why-do-they-matter-1200x630.jpg');
+        background-repeat: no-repeat;
+        background-size: cover; /* Or use 'contain' if preferred */
+      }
     </style>
 </head>
-<body class="">
+<body class="bg-light">
   <header>
-    <nav class="navbar navbar-expand-md navbar-light bg-warning fixed-top rounded-pill">
+    <nav class="navbar navbar-expand-md navbar-light bg-md-warning fixed-top rounded-pill">
       <div class="container-fluid">
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <a class="navbar-brand fw-bold h1 text-danger dispay-2" href="#">uptoWin</a>
+        <a class="navbar-brand fw-bold h1 text-danger display-4" href="{{ url_for('uptoWin') }}">uptoWin</a>
         <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-4 text-primary work">
-          <li class="nav-item mx-4 text-primary">
-            <button class="btn btn-warning position-relative" type="button">
-              <a class="nav-link active" aria-current="page" href="{{ url_for('home') }}" target="_self">
-                Home
-              </a>
-            </button>
-          </li>
-          <li class="nav-item mx-4 run">
-            <button class="btn btn-warning position-relative" type="button">
-              <a class="nav-link run active" aria-current="page" href="{{ url_for('running') }}" target="_self">Running</a>
-              <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                {{ run_count }}+
-              </span>
-            </button>
-          </li>
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-4 text-primary work">
+            <li class="nav-item mx-4 text-primary">
+              <button class="btn btn-warning position-relative" type="button">
+                <a class="nav-link active" aria-current="page" href="{{ url_for('home') }}" target="_self">
+                  Home
+                </a>
+              </button>
+            </li>
+            <li class="nav-item mx-4 run">
+              <button class="btn btn-warning position-relative" type="button">
+                <a class="nav-link run active" aria-current="page" href="{{ url_for('running') }}" target="_self">Running</a>
+                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                  {{ run_count }}+
+                </span>
+              </button>
+            </li>
 
-          <li class="nav-item mx-4">
-            <button type="button" class="btn btn-warning position-relative">
-              <a class="nav-link active up" href="{{ url_for('upcoming') }}">Upcoming</a>
-              <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                {{ up_count }}+
-              </span>
-            </button>
-          </li>
+            <li class="nav-item mx-4">
+              <button type="button" class="btn btn-warning position-relative">
+                <a class="nav-link active up" href="{{ url_for('upcoming') }}">Upcoming</a>
+                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                  {{ up_count }}+
+                </span>
+              </button>
+            </li>
 
-          <li class="nav-item mx-4">
-            <button class="btn btn-warning position-relative" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
-              <a class="nav-link res" href="#">Resourses</a>
-            </button>
-            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
-              <div class="offcanvas-header">
-                <h4 class="offcanvas-title" id="offcanvasExampleLabel">Expand your knowhow</h4>
-                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-              </div>
-            <div class="offcanvas-body">
-              <div>
-                <h6>Expolore the following free practice contests, increase you chances of winning</h6>
-                <ul>
-                  <li><a href="https://atcoder.jp/contests/practice" target="_self">practice one</a></li>
-                  <li><a href="https://www.codechef.com/learn", target="_self">practice two</a></li>
-                </ul>
-              </div>
-              <div class="dropdown mt-3 boader-top">
-                <h4>Are you an ALX student?</h4>
-                <h6>
-                    Have concepts broken down for free by
-                    scheduling a meeting with with any ALX
-                    mentor in the dropdown below.
-                </h6>
-                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown">
-                  Dropdown button
-                </button>
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                  <li><a class="dropdown-item" href="https://d36-GR04.eu1.hubspotlinks.com/Ctc/2O+113/d36-GR04/VW-hGp4ccYGHW8fdmvX891mW2VkMXxJ53cF1TN3fD2D83m2ndW7lCdLW6lZ3kPW86LMrY6-gQFfW166dh544kw51W1zWVxH8KWbv_V2q4mQ5J6zkMVh3Cv68jZk00W6HKxSc4pZ2LqM6_C7x52lzPW2v4gkm4jdBxHN2PZPHdzdztJW3NgFPX8XMbZlVkG0Cq3JFHwmW7V9S9m8gdcYjW8V3fX36zd5t3W91Bclv8thkcPW1FRGtT49wB1YVbxWvp3sW9ZSW2gVDSr5gjGnRW6G5xfx3nkVZXW4DJNSg6V6RK4VFKpqG8CJFqJW841kqs1zs9rXW42ChRS5fsCl_VQ_PkW2mq2GQW5ZTbf41kzLHTf8kyryz04" target="_self">Charles</a></li>
-                  <li><a class="dropdown-item" href="https://d36-GR04.eu1.hubspotlinks.com/Ctc/2O+113/d36-GR04/VW-hGp4ccYGHW8fdmvX891mW2VkMXxJ53cF1TN3fD2D83m2ndW7lCdLW6lZ3pwW70LW6D6cvMZXW3_x_Lf5CnFgnW657yLd4JjnrHW8_Q6lt1N6YCVW3dgtDG1_YqrZW3LD78c7yfz5lW90LY0r1TDnk7W755LH11p9GgPW890_853bD_mQW7YY96911-RHqW6kMH-s6zCd6QW7zNS7D3T-VyyN28zLtGgv6lGW6ZVQKw19l5mDW4vkLyv6PPYfMN8Zr-lkfjmtWW5qPfZg6CgTSyW3wBqcH58xn0KW2qSq8b8tF_7JW7RNt3g3Gc5wXW55Ckkr2dD429W8DCCrh4XC0gMW2-_H8J2QRwWRVKfBvC8-nKQwf5j17bW04" target="_self">Alfred</a></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
-                </ul>                
-              </div>
-            </div>
-          </li>
-          <li class="nav-item ms-5">
-            <button class="btn btn-warning position-relative" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
-              <a class="nav-link about" href="#">About</a>
-            </button>
-              <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+            <li class="nav-item mx-4">
+              <button class="btn btn-warning position-relative" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+                <a class="nav-link res" href="#">Resourses</a>
+              </button>
+              <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
                 <div class="offcanvas-header">
-                <h2 id="offcanvasRightLabel">Project Inspiration</h2>
-                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                  <h4 class="offcanvas-title" id="offcanvasExampleLabel">Expand your knowhow</h4>
+                  <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+              <div class="offcanvas-body">
+                <div>
+                  <h6>Expolore the following free practice contests, increase you chances of winning</h6>
+                  <ul>
+                    <li><a href="https://atcoder.jp/contests/practice" target="_self">practice one</a></li>
+                    <li><a href="https://www.codechef.com/learn", target="_self">practice two</a></li>
+                  </ul>
+                </div>
+                <div class="dropdown mt-3 boader-top">
+                  <h4>Are you an ALX student?</h4>
+                  <h6>
+                     Have concepts broken down for free by
+                     scheduling a meeting with with any ALX
+                     mentor in the dropdown below.
+                  </h6>
+                  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown">
+                    Dropdown button
+                  </button>
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <li><a class="dropdown-item" href="https://d36-GR04.eu1.hubspotlinks.com/Ctc/2O+113/d36-GR04/VW-hGp4ccYGHW8fdmvX891mW2VkMXxJ53cF1TN3fD2D83m2ndW7lCdLW6lZ3kPW86LMrY6-gQFfW166dh544kw51W1zWVxH8KWbv_V2q4mQ5J6zkMVh3Cv68jZk00W6HKxSc4pZ2LqM6_C7x52lzPW2v4gkm4jdBxHN2PZPHdzdztJW3NgFPX8XMbZlVkG0Cq3JFHwmW7V9S9m8gdcYjW8V3fX36zd5t3W91Bclv8thkcPW1FRGtT49wB1YVbxWvp3sW9ZSW2gVDSr5gjGnRW6G5xfx3nkVZXW4DJNSg6V6RK4VFKpqG8CJFqJW841kqs1zs9rXW42ChRS5fsCl_VQ_PkW2mq2GQW5ZTbf41kzLHTf8kyryz04" target="_self">Charles</a></li>
+                    <li><a class="dropdown-item" href="https://d36-GR04.eu1.hubspotlinks.com/Ctc/2O+113/d36-GR04/VW-hGp4ccYGHW8fdmvX891mW2VkMXxJ53cF1TN3fD2D83m2ndW7lCdLW6lZ3pwW70LW6D6cvMZXW3_x_Lf5CnFgnW657yLd4JjnrHW8_Q6lt1N6YCVW3dgtDG1_YqrZW3LD78c7yfz5lW90LY0r1TDnk7W755LH11p9GgPW890_853bD_mQW7YY96911-RHqW6kMH-s6zCd6QW7zNS7D3T-VyyN28zLtGgv6lGW6ZVQKw19l5mDW4vkLyv6PPYfMN8Zr-lkfjmtWW5qPfZg6CgTSyW3wBqcH58xn0KW2qSq8b8tF_7JW7RNt3g3Gc5wXW55Ckkr2dD429W8DCCrh4XC0gMW2-_H8J2QRwWRVKfBvC8-nKQwf5j17bW04" target="_self">Alfred</a></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  </ul>                
+                </div>
               </div>
-              <div class="offcanvas-body body_about">
-                <h3>Overview</h2>
-                  <p>
-                     <span>
-                       This web app aims to create an environment where someone,
-                       regardless of age or experince, can leverge his creativity,
-                       skills or talent to compete for a job or win lots of prizes.
-                     </span>
-                     Alot of people most escipecially the young generation,
-                     face a difficult challenge of rejection after or during
-                     their prime stages of self-development, studying and
-                     mastering their talents. This is partially because they lack
-                     the required experience levels as supposed by the employers
-                     in order to qualify for job interviews and you find that after
-                     all that hardwork, the person is anable to exploit the acquired
-                     skills. This tends to hinder further self-development and learning.
-                     <section>
-                       <h5>Linkedln:</h5>
-                       <h5>Twitter:</h5>
-                       <h5>Project git hub url:</h5>
-                       <h4>Created by: <b>NIWAMANYA BRUNO</b></h4>
-                       <h4># ALX portfolio project</h4>
-                       <h4># ready for hire</h4>
-                     </section>  
-                  </p>
+            </li>
+            <li class="nav-item ms-5">
+              <button class="btn btn-warning position-relative" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                <a class="nav-link about" href="#">About</a>
+              </button>
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+                  <div class="offcanvas-header">
+                  <h2 id="offcanvasRightLabel">Project Inspiration</h2>
+                  <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body body_about">
+                  <h3>Overview</h2>
+                    <p>
+                       <span>
+                         This web app aims to create an environment where someone,
+                         regardless of age or experince, can leverge his creativity,
+                         skills or talent to compete for a job or win lots of prizes.
+                       </span>
+                       Alot of people most escipecially the young generation,
+                       face a difficult challenge of rejection after or during
+                       their prime stages of self-development, studying and
+                       mastering their talents. This is partially because they lack
+                       the required experience levels as supposed by the employers
+                       in order to qualify for job interviews and you find that after
+                       all that hardwork, the person is anable to exploit the acquired
+                       skills. This tends to hinder further self-development and learning.
+                       <section>
+                         <h5><a href="https://github.com/noah-brunate/uptoWin" target="_black">Project git hub url</a></h5>
+                         <h4>Created by: <b>NIWAMANYA BRUNO</b></h4>
+                         <h4># ALX portfolio project</h4>
+                         <h4># ready for hire</h4>
+                       </section>  
+                    </p>
+                </div>
               </div>
-            </div>
-          </li>
-        </ul>
+            </li>
+          </ul>
+          </div>
         </div>
+      </nav>
+    </header>
+    <section class="container-fluid">
+      {% block body %}
+        <div class="container">
+          <div class="row justify-content-start">
+            <div class="col-8">
+              <h3>Did you know that with only your talent, skill or creativity, you can actually secure yourself ajob or win cash prizes</h3>
+              <span display-3>Explore the following features</span>
+            </div>
+          </div>
+          <div class="row justify-content-around pt-5">
+            <div class="col-4">
+              <h5>Here is where you find the open contests</h5>
+            </div>
+            <div class="col-4">
+              <img src="{{ url_for('static', filename='images/Capture1.PNG') }}" class="img-fluid" alt="...">
+            </div>
+          </div>
+          <div class="row justify-content-between pt-5">
+            <div class="col-3">
+              <h5>Utilize this section by getting all the help you need from mentors</h5>
+            </div>
+            <div class="col-2">
+              <img src="https://i.gifer.com/origin/2a/2a690444369a44459dde15d3578ae9a9_w200.gif" class="img-fluid" alt="..." width="200">
+            </div>
+            <div class="col-3">
+              <img src="{{ url_for('static', filename='images/Capture2.PNG') }}" class="img-fluid" alt="...">
+            </div>
+          </div>
+          <div class="row justify-content-evenly pt-5">
+            <div class="col-4">
+              <h5>Explore the yet to start contests in this section</h5>
+            </div>
+            <div class="col-4">
+              <img src="{{ url_for('static', filename='images/Capture3.PNG') }}" class="img-fluid" alt="...">
+            </div>
+          </div>
+        </div>
+      {% endblock %}
+    </section>
+    <section class="mt-5 bg-info">
+      <div class="row">
+        <div class="col-4">
+          <h2>UptoWin</h2>
+          <h5><a href="https://github.com/noah-brunate/uptoWin" target="_black">Project git hub url</a></h5>
+          <h4>Created by: <b>NIWAMANYA BRUNO</b></h4>
+          <h4># ALX portfolio project</h4>
+          <h4># ready for hire</h4>
+        </div>
+        <div class="col-4">
+          <h3>Support</h3>
+            <ul>
+              <li><a>Contact Us</a></li>
+              <li><a>Frequently Asked Questions</a></li>
+              <li><a>Services and Terms</a></li>
+            </ul>
+        </div>
+        <div class="col-4">
+          <h3>Media</h3>
+          <img src="https://w7.pngwing.com/pngs/670/396/png-transparent-computer-icons-github-icon-design-logo-github-cat-like-mammal-carnivoran-logo-thumbnail.png" class="img-fluid" alt="..." width="50">
+          <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" class="img-fluid" width="50">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpDxXJWniEL7LQH1L4sUYhc7kZg6AI5w27GSFI8IE&s" class="img-fluid" alt="..." width="50">
+          <img src="https://cdn4.iconfinder.com/data/icons/social-media-logos-6/512/112-gmail_email_mail-512.png" class="img-fluid" alt="..." width="50">
+       </div>
       </div>
-    </nav>
-  </header>
-  <section class="bg-light container-fluid">
-    {% block body %}
-    {% endblock %}
-  </section>
-  <section class="mt-5 bg-info">
-    <div class="row">
-      <div class="col-4">
-        <h3>column one</h3>
-      </div>
-      <div class="col-4">
-        <h3>column two</h3>
-      </div>
-      <div class="col-4">
-        <h3>column three</h3>
-      </div>
-    </div>
-  </secton>
-  <script src="static/scripts/0-file.js"></script>    
-  <script src="static/scripts/test.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    </secton>
+    <script src="static/scripts/0-file.js"></script>    
+    <script src="static/scripts/test.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 </html>
+

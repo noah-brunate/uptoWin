@@ -27,11 +27,12 @@ def home():
 @app.route('/upcoming', strict_slashes=False)
 def upcoming():
     objs = models.storage.all('Upcoming').values()
-    return render_template("upcoming.html", objs=objs, run_count=num1, up_count=num2)
+    return render_template("upcoming.html", objs=objs, run_count=num2, up_count=num1)
 
 @app.route('/running', strict_slashes=False)
 def running():
-    return render_template("running.html", run_count=num1, up_count=num2)
+    objs = models.storage.all('Running').values()
+    return render_template("running.html", objs=objs, run_count=num2, up_count=num1)
 
 if __name__ == '__main__':
     app.run(host="0.0.0.0", port=5000, debug=True)

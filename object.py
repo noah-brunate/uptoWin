@@ -19,10 +19,9 @@ def data():
             avail_objs = json.load(file)
         for obj in objs:
             num = 0
-            if avail_objs == []:
-                for v in avail_objs.values():
-                    if v['name'] == obj['name']:
-                        num = 1
+            for v in avail_objs.values():
+                if v['name'] == obj['name']:
+                    num = 1
             if num == 0:
                 if obj['status'] == 'CODING':
                     val1 = Running(**obj)
